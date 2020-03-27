@@ -19,8 +19,9 @@ class Server(BaseHTTPRequestHandler):
         try:
             self.send_response(303)
             self.end_headers()
-            print("received")
-            
+
+                print("ok")
+
         except Exception as e:
             pass
         #recevoir les informations de modification des plans, agir en conséquence puis renvoyer la page d'acceuil
