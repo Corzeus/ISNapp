@@ -1,5 +1,4 @@
 const form = document.getElementById("f");
-console.log(form);
 form.addEventListener("submit", (e) => {
   e.preventDefault();
 
@@ -9,13 +8,14 @@ form.addEventListener("submit", (e) => {
 
   rq.onreadystatechange = function(){
     if (this.readystate == 4 && this.status == 200){
-      console.log(this);
+      console.log(form);
     }
   };
 
   rq.open("POST", true);
   rq.responseType = "json";
-  rq.setRequestHeader("Content-Type", "application/json");
+  //rq.setRequestHeader("Content-Type", "application/json");
+
   rq.send(data);
 
   return false;

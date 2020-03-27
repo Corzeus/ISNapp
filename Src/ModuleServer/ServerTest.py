@@ -20,10 +20,17 @@ class Server(BaseHTTPRequestHandler):
             self.send_response(303)
             self.end_headers()
 
-                print("ok")
+            content_type, paramsdict = cgi.parse_header(self.headers.["content-type"])
+            print(content_type)
+            print(paramsdict)
+            if content_type == "multipart/form-data":
+                fields = cgi.parse_multipart(self.rfile, paramsdict)
+                print(fields)
+
 
         except Exception as e:
-            pass
+            print("error")
+            raise
         #recevoir les informations de modification des plans, agir en conséquence puis renvoyer la page d'acceuil
 
 serv = HTTPServer(('localhost', 8000), Server)
