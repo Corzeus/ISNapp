@@ -2,7 +2,7 @@ const form = document.getElementById("f");
 form.addEventListener("submit", (e) => {
   e.preventDefault();
 
-  var data = new FormData(form);
+  var data = {'username':'jean-paul'};
 
   var rq = new XMLHttpRequest();
 
@@ -13,10 +13,10 @@ form.addEventListener("submit", (e) => {
   };
 
   rq.open("POST", true);
-  rq.responseType = "json";
-  //rq.setRequestHeader("Content-Type", "application/json");
+  //rq.responseType = "json";
+  rq.setRequestHeader("Content-Type", "application/json");
 
-  rq.send(data);
+  rq.send(JSON.stringify(data));
 
   return false;
 })

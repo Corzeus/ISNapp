@@ -1,5 +1,7 @@
 from http.server import HTTPServer, BaseHTTPRequestHandler
 import cgi
+import json
+from urllib.parse import urlparse, parse_qs
 
 class Server(BaseHTTPRequestHandler):
     def do_GET(self):
@@ -20,12 +22,13 @@ class Server(BaseHTTPRequestHandler):
             self.send_response(303)
             self.end_headers()
 
-            content_type, paramsdict = cgi.parse_header(self.headers.["content-type"])
-            print(content_type)
-            print(paramsdict)
-            if content_type == "multipart/form-data":
-                fields = cgi.parse_multipart(self.rfile, paramsdict)
-                print(fields)
+            #print(self.headers)
+            content_type, paramsdict = cgi.parse_header(self.headers["content-type"])
+
+            if content_type == "application/json":
+                length = int(self.headers['content-length'])
+                data = self.rfile.read(length).decode('utf-8')
+                data = json.loads(data)
 
 
         except Exception as e:
