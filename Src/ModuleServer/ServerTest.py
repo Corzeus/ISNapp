@@ -32,7 +32,7 @@ class Server(BaseHTTPRequestHandler):
                 length = int(self.headers['content-length'])
                 data = self.rfile.read(length).decode('utf-8')
                 data = json.loads(data)
-
+            
 
         except Exception as e:
             print("error")
