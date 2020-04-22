@@ -1,0 +1,8 @@
+.empty{
+  fill: yellow;
+  stroke : black;
+}
+.occuped{
+  fill: pink;
+  stroke : black;
+}

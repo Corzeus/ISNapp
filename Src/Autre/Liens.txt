@@ -1,0 +1,10 @@
+Module Server:
+    - Javascript et svg selection:
+              Pour la partie avec la selection des chambres j'ai repris le procédé proposé par RGB:
+              https://stackoverflow.com/questions/2296097/making-an-svg-image-object-clickable-with-onclick-avoiding-absolute-positioning
+
+              Introduction à la libraire lxml pour la partie génération du plan:
+              https://stackabuse.com/introduction-to-the-python-lxml-library/
+
+              Théorie pour le changement de couleur avec les balises css (seulement le tout début):
+              https://css-tricks.com/click-svg-to-focus/

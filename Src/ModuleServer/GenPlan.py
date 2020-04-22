@@ -1,43 +1,46 @@
 import xml.dom.minidom as _m
 import re
 import lxml.html
+import lxml.etree
+import os
 
 class GenPlan():
     """docstring forGenPlan."""
 
-    def __init__(self):
-        pass
-
-    def recup_bouttons(self, svg_path):
+    def recup_plan(self, svg_path):
         future_boutons = {}
         image = _m.parse(svg_path)
 
-        chambres = image.getElementsByTagName("rect")
+        chambres = image.getElementsByTagName("rect") #on récupère tout ce qui s'apparente à une chambre
         for chambre in chambres:
-            if re.match(chambre.attributes["id"].value, "Chambre\w"):
-                future_boutons[chambre.attributes["id"]] = chambre.toxml()
+            if re.match("Chambre\w" ,chambre.attributes["id"].value) or re.match("Chambre\w" ,chambre.attributes["inkscape:label"].value):#on vérifie que c'est bien une chambre
+                chambre.setAttribute("onclick", "change_state(this);")
+                chambre.setAttribute("class", "empty") #va permettre d'appeler la fonction javascript change_state lors du click
+        #il est important de mettre l'argument "this" pour permettre au code javascript de reconnaître le bouton enquestion et le modifier
+        image.toxml() #il y a un problème d'ordre: ls tyle de l'objet passe après la classe, ce qui fait que le style de la classe n'est paspris en compte
+        #il faut donc régler cela en mettant le style comme premier argument
 
-        for buttons in future_boutons.keys():
-            i = f'<button id="{buttons}"> <svg>{future_boutons[buttons]}</svg> </button>'
-        return future_boutons
+        return
 
     def new_plan(self, svg_path, nom_du_plan):
         #récupération des bouttons
-        f_b = self.recup_bouttons(svg_path)
+        f_b = self.recup_plan(svg_path)
+        root_node = lxml.html.parse("Plans/PlanSqueletteHTML.html")
 
-        content = ""
-        with open("PlanSqueletteHTML.html", "r") as f:
-            content = f.read()
-        root_node = lxml.html.fromstring(content)
-
+        print(lxml.html.tostring(root_node))
         div = root_node.find(".//div[@id='main_plan']") #. = seulement les enfants du node qui cherche, // = tous les éléments
+        #donne donc: je cherche tous les enfants de div où div a pour id 'main_plan'
 
-        for i in f_b:
-            el = lxml.html.fromstring(i) #on récupère les éléments créés
-            div.append(el)
+        el = lxml.html.fromstring(f_b) #on récupère les éléments créés
+        div.append(el)# on l'ajoute à notre principale partie
 
-        with open(f'{nom_du_plan}.html', "w") as f:
-            f.write(lxml.html.tostring(root_node))
+        # partie enregistrement de l'image +
+        path = f'Plans/HtmlFinalVersion/{nom_du_plan}.html'
+        os.makedirs(os.path.dirname(path), exist_ok=True)#marche suelement avec python 3.2
+        with open(path, "w") as f:
+            f.write(lxml.html.tostring(root_node).decode("utf-8"))
+
+        return path
 t = GenPlan()
 
-t.new_plan("Plantest.svg", "Superplan")
+t.new_plan("Plans/Svg/Plantest.svg", "Superplan")
