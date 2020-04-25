@@ -1,3 +1,17 @@
+body{
+  margin:0;
+  padding: 0;
+}
+nav{
+  background: #5472abff;
+  height: 50px;
+}
+.button_return{
+  float: left;
+}
+.name_plan{
+  float: right;
+}
 .empty{
   fill: yellow;
   stroke : black;
@@ -5,4 +19,10 @@
 .occuped{
   fill: pink;
   stroke : black;
+}
+#container_div_plan{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin-top: 5%;
 }

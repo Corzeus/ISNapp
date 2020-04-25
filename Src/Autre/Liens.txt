@@ -8,3 +8,6 @@ Module Server:
 
               Théorie pour le changement de couleur avec les balises css (seulement le tout début):
               https://css-tricks.com/click-svg-to-focus/
+
+              Pour les X-paths:
+              https://www.w3schools.com/xml/xpath_syntax.asp

@@ -9,77 +9,36 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="111.94395mm"
+   width="111.94396mm"
    height="101.28613mm"
-   viewBox="0 0 111.94395 101.28613"
+   viewBox="0 0 111.94397 101.28612"
    version="1.1"
    id="svg8"
    inkscape:version="0.92.3 (2405546, 2018-03-11)"
    sodipodi:docname="Plantest.svg">
-  <defs
-     id="defs2" />
-  <sodipodi:namedview
-     id="base"
-     pagecolor="#ffffff"
-     bordercolor="#666666"
-     borderopacity="1.0"
-     inkscape:pageopacity="0.0"
-     inkscape:pageshadow="2"
-     inkscape:zoom="0.92111027"
-     inkscape:cx="291.18766"
-     inkscape:cy="116.10153"
-     inkscape:document-units="mm"
-     inkscape:current-layer="layer1"
-     showgrid="false"
-     inkscape:window-width="1600"
-     inkscape:window-height="837"
-     inkscape:window-x="-8"
-     inkscape:window-y="-8"
-     inkscape:window-maximized="1"
-     fit-margin-top="0"
-     fit-margin-left="0"
-     fit-margin-right="0"
-     fit-margin-bottom="0" />
-  <metadata
-     id="metadata5">
-    <rdf:RDF>
-      <cc:Work
-         rdf:about="">
-        <dc:format>image/svg+xml</dc:format>
-        <dc:type
-           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
-      </cc:Work>
-    </rdf:RDF>
-  </metadata>
-  <g
-     inkscape:label="Calque 1"
-     inkscape:groupmode="layer"
-     id="layer1"
-     transform="translate(-16.108627,-87.611313)">
-    <rect
-       style="opacity:1;fill:#c35181;fill-opacity:1;stroke:#846572;stroke-width:2;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
-       id="Chambre_3"
-       width="33.375847"
-       height="64.788406"
-       x="17.108627"
-       y="88.611313"
-       inkscape:label="Chambre_3" />
-    <rect
-       style="opacity:1;fill:#c35181;fill-opacity:1;stroke:#846572;stroke-width:2;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
-       id="Chambre_2"
-       width="58.898548"
-       height="54.411041"
-       x="68.154037"
-       y="121.14575"
-       inkscape:label="Chambre_2" />
-    <rect
-       style="opacity:1;fill:#c35181;fill-opacity:1;stroke:#846572;stroke-width:2;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
-       id="Chambre_1"
-       width="35.33913"
-       height="14.303933"
-       x="17.950035"
-       y="173.59351"
-       inkscape:label="Chambre_1" />
-  </g>
+
+  <rect
+     style="opacity:1;fill:#c35181;fill-opacity:1;stroke:#846572;stroke-width:2;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+     id="Chambre"
+     width="33.375847"
+     height="64.788406"
+     x="1"
+     y="1"
+     inkscape:label="Chambre" />
+  <rect
+     style="opacity:1;fill:#c35181;fill-opacity:1;stroke:#846572;stroke-width:2;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+     id="rect3"
+     width="58.898548"
+     height="54.411041"
+     x="52.045414"
+     y="33.534439"
+     inkscape:label="Chambre" />
+  <rect
+     style="opacity:1;fill:#c35181;fill-opacity:1;stroke:#846572;stroke-width:2;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+     id="rect5"
+     width="35.33913"
+     height="14.303933"
+     x="1.8414078"
+     y="85.982193"
+     inkscape:label="Chambre" />
 </svg>
