@@ -15,7 +15,7 @@ class GenPlan():
         for chambre in chambres:
             if re.match(r"Chambre\w?" ,chambre.attributes["id"].value) or re.match(r"Chambre\w?" ,chambre.attributes["inkscape:label"].value):#on vérifie que c'est bien une chambre
                 chambre.setAttribute("onclick", "change_state(this);")
-                chambre.setAttribute("class", "empty")
+                chambre.setAttribute("class", "vide")
                 style_sans_fill = re.sub(r"fill:#\w+;",'',chambre.getAttribute("style"))
                 style_sans_fill_sans_stroke = re.sub(r"stroke:#\w+;",'',style_sans_fill)
                 chambre.setAttribute("style", style_sans_fill_sans_stroke) #va permettre d'appeler la fonction javascript change_state lors du click
