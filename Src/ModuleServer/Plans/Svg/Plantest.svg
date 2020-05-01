@@ -2,143 +2,99 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="111.94396mm"
-   height="101.28613mm"
-   viewBox="0 0 111.94397 101.28612"
+   width="113.16127mm"
+   height="103.69733mm"
+   viewBox="0 0 113.16128 103.69731"
    version="1.1"
    id="svg8"
    inkscape:version="0.92.3 (2405546, 2018-03-11)"
    sodipodi:docname="Plantest.svg">
-  <metadata
-     id="metadata10">
-    <rdf:RDF>
-      <cc:Work
-         rdf:about="">
-        <dc:format>image/svg+xml</dc:format>
-        <dc:type
-           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
-      </cc:Work>
-    </rdf:RDF>
-  </metadata>
-  <defs
-     id="defs8" />
-  <sodipodi:namedview
-     pagecolor="#ffffff"
-     bordercolor="#666666"
-     borderopacity="1"
-     objecttolerance="10"
-     gridtolerance="10"
-     guidetolerance="10"
-     inkscape:pageopacity="0"
-     inkscape:pageshadow="2"
-     inkscape:window-width="1600"
-     inkscape:window-height="837"
-     id="namedview6"
-     showgrid="true"
-     inkscape:zoom="1.702566"
-     inkscape:cx="239.15715"
-     inkscape:cy="98.639282"
-     inkscape:window-x="-8"
-     inkscape:window-y="-8"
-     inkscape:window-maximized="1"
-     inkscape:current-layer="svg8">
-    <inkscape:grid
-       type="xygrid"
-       id="grid27"
-       spacingx="2.6458333"
-       spacingy="2.6458333" />
-  </sodipodi:namedview>
+
   <rect
-     style="opacity:1;fill:#a5a5a5;fill-opacity:1;stroke:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
-     id="rect849"
-     width="111.11092"
-     height="100.52759"
-     x="0.014071688"
-     y="0.7585392" />
+     style="opacity:1;fill:#a5a5a5;fill-opacity:1;stroke:none;stroke-width:2.31583309;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+     id="ground"
+     width="128.6572"
+     height="116.40258"
+     x="-7.7590656"
+     y="-6.8425298" />
   <rect
      style="opacity:1;fill:#c35181;fill-opacity:1;stroke:#846572;stroke-width:2;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
-     id="Chambre"
+     id="Chambre-2"
      width="34.336681"
      height="64.760262"
-     x="0.014071688"
-     y="0.7585392"
+     x="1.0140717"
+     y="1.0949652"
      inkscape:label="Chambre" />
   <rect
      style="opacity:1;fill:#c35181;fill-opacity:1;stroke:#846572;stroke-width:2;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
-     id="rect3"
+     id="Chambre-3"
      width="58.027298"
      height="54.411041"
-     x="52.916664"
-     y="33.534439"
+     x="53.916664"
+     y="33.870865"
      inkscape:label="Chambre" />
   <rect
      style="opacity:1;fill:#c35181;fill-opacity:1;stroke:#846572;stroke-width:2;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
-     id="rect5"
+     id="Chambre-4"
      width="34.395832"
      height="14.303933"
-     x="0"
-     y="86.982201"
+     x="1"
+     y="87.318626"
      inkscape:label="Chambre" />
   <rect
      style="opacity:1;fill:#c35181;fill-opacity:1;stroke:#846572;stroke-width:2;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
-     id="rect3-4"
+     id="Chambre-5"
      width="58.244606"
      height="33.088177"
-     x="52.916664"
-     y="0.66357398"
+     x="53.916664"
+     y="1"
      inkscape:label="Chambre" />
   <rect
      style="opacity:1;fill:#c35181;fill-opacity:1;stroke:#846572;stroke-width:2;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
-     id="rect5-9"
+     id="Chambre-6"
      width="58.208328"
      height="14.303933"
-     x="52.916664"
-     y="88.056969"
+     x="53.916664"
+     y="88.393394"
      inkscape:label="Chambre" />
   <text
      xml:space="preserve"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52777767px;line-height:1.25;font-family:borsok;-inkscape-font-specification:borsok;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-     x="65.839012"
-     y="16.619467"
+     x="66.839012"
+     y="16.955893"
      id="text853"><tspan
        sodipodi:role="line"
        id="tspan851"
-       x="65.839012"
-       y="16.619467"
+       x="66.839012"
+       y="16.955893"
        style="stroke-width:0.26458332">Chambre 1</tspan></text>
   <text
      xml:space="preserve"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52777767px;line-height:1.25;font-family:borsok;-inkscape-font-specification:borsok;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-     x="66.149818"
-     y="56.617771"
+     x="67.149818"
+     y="56.954197"
      id="text853-7"><tspan
        sodipodi:role="line"
        id="tspan851-3"
-       x="66.149818"
-       y="56.617771"
+       x="67.149818"
+       y="56.954197"
        style="stroke-width:0.26458332">Chambre 2</tspan></text>
   <text
      xml:space="preserve"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52777767px;line-height:1.25;font-family:borsok;-inkscape-font-specification:borsok;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-     x="66.145828"
-     y="95.994469"
+     x="67.145828"
+     y="96.330894"
      id="text853-7-9"><tspan
        sodipodi:role="line"
        id="tspan851-3-4"
-       x="66.145828"
-       y="95.994469"
+       x="67.145828"
+       y="96.330894"
        style="stroke-width:0.26458332">Chambre 3</tspan><tspan
        sodipodi:role="line"
-       x="66.145828"
-       y="100.40419"
+       x="67.145828"
+       y="100.74062"
        style="stroke-width:0.26458332"
        id="tspan891" /></text>
 </svg>

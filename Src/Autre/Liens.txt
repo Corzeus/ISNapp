@@ -11,3 +11,6 @@ Module Server:
 
               Pour les X-paths:
               https://www.w3schools.com/xml/xpath_syntax.asp
+
+              Pour tout ce qui est javascript:
+              https://developer.mozilla.org/fr/docs/Web/API/Element/getAttribute
