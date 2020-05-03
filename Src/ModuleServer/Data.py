@@ -52,6 +52,21 @@ class DataManager():
         else:
             return "NoPlanData"
 
+    def edit_chambre(self, id, caracs):
+        cmd = "UPDATE chambres SET "
+        k = caracs.keys()
+        j=0
+        for i in k:
+            if j == 0:
+                cmd += f"{i}=:{i}"
+            else:
+                cmd += f", {i}=:{i}"
+            j+=1
+        cmd += " WHERE id=:id"
+        caracs["id"] = int(id)
+        self.c.execute(cmd, caracs)
+        self.conn.commit()
+
     def determiner_id(self, table):
         #fonction qui détermine une id UNIQUE pour chaques membres de la base de données
         data_to_send = {}

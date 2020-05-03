@@ -18,27 +18,53 @@ function load(){
 
   cmd = "?id="+id;
   var data = {};
-  //Envoie de la command pour recevoir les infos de la base de données
+  //Envoie de la commande pour recevoir les infos de la base de données
   var rq = new XMLHttpRequest();
   rq.onreadystatechange = function(){
-    console.log("ok");
     if ( this.status == 200){
       data = rq.response;
-      chambres_plan = document.getElementsByTagName('rect');
-      for (var i = 0; i < data.chambres.length; i++) {
-        for (var j = 0; j < chambres_plan.length; j++){
-          if (data["chambres"][i]["id"]==chambres_plan[j].getAttribute("id_data")){
-            chambres_plan[j].className.baseVal = data["chambres"][i]["etat"];
-          }
-        }
+      if (data!=null){var keys = Object.keys(data);
+      if (keys.includes("nom")){
+        if (data["nom"]=="EnvoieDesInfosFrontEnd") {
+          console.log(data);
+          chambres_plan = document.getElementsByTagName('rect');
+          delete data["nom"];
+          for (var i = 0; i < data.chambres.length; i++) {
+            for (var j = 0; j < chambres_plan.length; j++){
+              if (data["chambres"][i]["id"]==chambres_plan[j].getAttribute("id_data")){
+                chambres_plan[j].className.baseVal = data["chambres"][i]["etat"];
+              }
+            }
+          }}}
+    }}
 
-      }
-    }
   };
 
-  rq.open("GET", cmd);//"/Plans/HtmlFinalVersion/"+src+
+  rq.open("GET", cmd);
   rq.responseType = 'json';
   rq.send();
-  console.log(data);
+}
 
+function send(){
+  //partie récupération des données de  la page
+  var possibles_chambres = document.getElementsByTagName("rect");
+  console.log(possibles_chambres);
+  var tous_les_etats = ["vide", "occupe", "inaccessible"];
+  var chambres=[];
+  for (var i =0; i<possibles_chambres.length; i++){
+    if (tous_les_etats.includes(possibles_chambres[i].className.baseVal)){
+      chambres.push(possibles_chambres[i]);
+    }
+  };
+  //partie création des données d'envoi
+  var data = {};
+  chambres.forEach(item => {
+    data[item.getAttribute("id_data")] = item.className.baseVal;
+  });
+  data["nom"] = "RetourDesDonneesDeLaPage";
+  //partie envoie des informations au serveur
+  var rq = new XMLHttpRequest;
+  rq.open("POST", true);
+  rq.setRequestHeader("Content-Type", "application/json");
+  rq.send(JSON.stringify(data));
 }

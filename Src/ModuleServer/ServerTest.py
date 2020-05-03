@@ -22,6 +22,7 @@ class Server(BaseHTTPRequestHandler):
             except Exception as e:
                 to_send = "Error page not found"
             self.send_response(200)# renvoie "tout va bien"
+            #self.send_header('Content-type', 'text/html')
             self.end_headers()
             self.wfile.write(bytes(to_send, "utf-8"))# renvoie la page html à afficher
         else:
@@ -41,6 +42,7 @@ class Server(BaseHTTPRequestHandler):
 
                 data["chambres"] = data["c"]
                 del data["c"]
+                data["nom"] = "EnvoieDesInfosFrontEnd"
                 #renvoie des données
                 print(data)
                 self.send_response(200)# renvoie "tout va bien"
@@ -60,12 +62,14 @@ class Server(BaseHTTPRequestHandler):
                 length = int(self.headers['content-length'])
                 data = self.rfile.read(length).decode('utf-8')
                 data = json.loads(data)
-
+            if data["nom"] == "RetourDesDonneesDeLaPage":
+                del data["nom"]
+                for i in data.keys():
+                    self.DataManager.edit_chambre(i, {"etat":data[i]})
 
         except Exception as e:
             print("error")
             raise
-
 
 serv = HTTPServer(('localhost', 8000), Server)#on lance le serveur
 serv.serve_forever()
