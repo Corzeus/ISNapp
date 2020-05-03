@@ -9,6 +9,10 @@ import json
 
 
 class Server(BaseHTTPRequestHandler):
+    types = {"html":"text/html", #sert pour les MIME (pour faire comprendre le type de contenu envoyé par la requête au navigateur)
+             "css": "text/css",
+             "svg": "text/svg+xml",
+             "png": "image/png"}
     DataManager = Data.DataManager()
     def do_GET(self):
         list_url = self.path.split("?") #on vérifie si il y a des arguments dans l'url
@@ -17,14 +21,20 @@ class Server(BaseHTTPRequestHandler):
             if self.path =="/":
                 self.path = "/index.html"#redirige vers la page principale
             try:
-                with open(self.path[1:], "r") as f:
+                with open(self.path[1:], "rb") as f:
                     to_send = f.read() #lit le chemin dans la barre d'url et cherche une page avec ce nom dans les pages html à disposition
             except Exception as e:
                 to_send = "Error page not found"
             self.send_response(200)# renvoie "tout va bien"
-            #self.send_header('Content-type', 'text/html')
+            print(self.path)
+            t = self.path.split(".")[1]
+            if t in self.types.keys():
+                c_t = self.types[t]
+                self.send_header('Content-type', c_t)
+                print("sended")
             self.end_headers()
-            self.wfile.write(bytes(to_send, "utf-8"))# renvoie la page html à afficher
+            self.wfile.write(to_send)# renvoie la page html à afficher
+            
         else:
             path =list_url[0]
             arguments = list_url[1]
