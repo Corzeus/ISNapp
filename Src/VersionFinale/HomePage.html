@@ -1,0 +1,61 @@
+<meta charset="utf-8" />
+<HTML></HTML>
+<link rel="stylesheet" href="Homepage.css"/>
+<HEAD></HEAD>
+
+<html>
+<head>
+<title>exemple de page vide</title>
+<meta charset="utf-8"  />
+
+<style>
+ #rond{
+	position : absolute;
+	left : 1px;
+	top : 2px;
+	width : 10px;
+	height : 10px;
+	background-color : black;
+	border-radius:50%;
+	-webkit-transition: left 2s ease, top 7s ease;
+    transition: left 2s ease, top 4s ease;
+ }
+</style>
+
+<script language="javascript">
+	var avecTexte = true;
+
+	function avancer(event){
+		document.querySelector('#rond').style.left = (event.clientX - 50) +'px';
+		document.querySelector('#rond').style.top = (event.clientY - 50) +'px';
+    }
+
+</script>
+
+</head>
+<body style="height: 900px;width: 1300px;" onclick="avancer(event)">
+  <div id="rond" ></div>
+</body>
+</html>
+
+
+<h1> Site </h1>
+
+<ul>
+  <li><a  class="active" href="#Home-Page">Home-PageGlobale</a></li>
+  <li><a href="#Edit">Edit</a></li>
+  <li><a href="#Log-In">Log-In</a></li>
+  <li><a href="#Sign-In">Sign-In</a></li>
+</ul>
+
+<h2> Plans </h2>
+
+<div class="container1">
+  <a href="Plans/Superplan.html"> <img src="Test3.png" height="100%" width="100%" ></a>
+</div>
+
+<div class="container2">
+  <a href="Plans/Superplan.html"> <img src="Test3.png" height="100%" width="100%" ></a>
+</div>
+
+<Credit> Site realisé Par Rémi Laramas Et Arthur Charbonnier </Credit>

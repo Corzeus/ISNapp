@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ISNapp</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__html"><h1 id="read-me">Read-me</h1>
+<p>Voiçi le mode d’emploi pour l’utilisation de notre application.</p>
+<h2 id="prérequis">Prérequis</h2>
+<p>Pour lancer l’application il faut avoir <strong>Python 3</strong> (la versino compte peu je pense) et les librairies suivantes:</p>
+<ul>
+<li><code>"lxml" et "xml"</code> : Elles sont facultatives si vous n’utilisez pas la fonctionnalité génération de plan qui se trouve dans <em>“<a href="http://GenPlan.py">GenPlan.py</a>”</em></li>
+<li><code>"cgi"</code> : Permet le décriptage des paquets envoyés par protocole http</li>
+<li><code>"urllib"</code> : Permet de décrypter facilement les urls</li>
+</ul>
+<p>Ensuite il vous suffit dans le terminal de commandes de lancer le fichier <a href="http://Server.py">Server.py</a> puis d’aller dans votre navigateur web et tapper l’url suivante : “localhost:8000/”<br>
+<em><strong>Si jamais</strong></em>: J’ai aussi fait une compilation du fichier “<a href="http://Serveur.py">Serveur.py</a>”, “Serveur.exe” mais je n’ai aucune idée de si ça marche sous linux ou non, j’ai seulement pu essayer sous windows. C’est tout de fois, une meilleure manière de lancer le programme sans embûches sous windows</p>
+<h2 id="génération-de-plan">Génération de plan</h2>
+<p>Si vous voulez tester la fonctionnalité voilà comment il faut utiliser le programme:</p>
+<ol>
+<li><strong>Faire un plan sous forme Svg</strong>: Le programme associe les rectangles ayant une id commençant par “Chambre” (pour modifier l’id dans inkscape il faut aller dans : <code>Objets-&gt; Propriétés de l'objet</code>, puis un pannel s’affiche ensuite à droite montrant les caractéristiques de l’objet <em>séletionné</em> , modifiez ensuite la propriété <code>id</code>)comme une chambre, ainsi lorsque vous allez créer le plan il faudra mettre autant de rectangle que de chambres dans le plan (vous pouvez rajouter du texte par-dessus comme dans l’exemple de notre page, ça n’affecte pas). Pour créer des fichiers svg je recommande l’utilisation de Inkscape (gratuit, open-source et c’est ce que nous avons utilisé durant notre projet). <em><strong>Important</strong></em> : lorsque vous allez créer, redimensionnez bien la taille de votre dessin à votre contenu une fois le dessin terminé (<code>fichier -&gt; propriétés du doc -&gt; "ajuster la page au dessin ou à la selection"</code>, pour inkscape) sinon la mise en page risque de ne pas fonctionner.</li>
+<li><strong>Lancer le programme</strong> : Il suffit d’exécuter le programme “<a href="http://GenPlan.py">GenPlan.py</a>” avec python, il va ensuite falloir rentrer un chemin vers votre plan puis le nom du plan de sortie (sans l’extension)</li>
+<li><strong>Consultation de la page</strong>: vous pouvez consulter le plan en lançant le server et en tappant <code>"localhost:8000/Plans/NomDeVotrePlan.html"</code></li>
+</ol>
+<blockquote>
+<p>Written with <a href="https://stackedit.io/">StackEdit</a>.</p>
+</blockquote>
+</div>
+</body>
+
+</html>

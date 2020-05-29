@@ -1,0 +1,85 @@
+
+body{
+color:black;
+background-color:white;
+background-image: url(https://www.uq.edu.au/news/filething/get/141199/EIAT%20medical%20hub.jpg);
+background-size:cover;
+background-repeat:no-repeat;
+}
+
+img {
+    
+	width: 300px;
+	height:300px;
+    max-width: 100%;
+	height: auto;
+}
+
+img1 {
+    
+	width: 150px;
+	height:150px;
+    max-width: 100%;
+	height: auto;
+}
+
+h1{
+    text-align:left;
+    font-family: Stencil Std, fantasy ;
+    font-size:45px ;
+    font-weight: bold;
+    font-stretch: ultra-expanded;
+}
+
+h2{
+
+    text-align:left;
+    font-size:32px;
+}
+
+Credit{
+
+    text-align:left;
+    font-size:32px;
+    vertical-align: bottom;
+}
+
+.container1{
+  width: 250px;
+  height: 250px;
+
+}
+
+.container2{
+  width: 150px;
+  height: 150px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color:none;
+}
+
+li {
+  float: left;
+  border-right: 1px solid #bbb;
+}
+
+li a{
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+    
+li a:hover:not(.active) {
+  background-color: #111;
+}
+    
+.active {
+  background-color: #4CAF50;
+}
